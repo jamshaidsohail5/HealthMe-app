@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.jamsh.healthme.MainActivity"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:clickable="false"
+    android:baselineAligned="false"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your steps today!"
+        android:id="@+id/textView"
+
+        android:textColor="#262626"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingRight="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0%"
+        android:id="@+id/totalSteps"
+        android:textColor="#323232"
+        android:textSize="60dp"
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/circularProgressBar"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="57dp" />
+
+    <ProgressBar
+        android:id="@+id/circularProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:indeterminate="false"
+        android:max="8000"
+        android:progress="2000"
+    android:progressDrawable="@drawable/progressbar"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="31dp"
+        android:layout_below="@+id/textView"
+        android:layout_toEndOf="@+id/totalSteps" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:id="@+id/date"
+        android:gravity="center"
+        android:textColor="#363636"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginEnd="82dp"
+        android:layout_alignTop="@+id/totalSteps"
+        android:layout_alignEnd="@+id/linearLayout2" />
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/graph"
+        android:background="#ffffff"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:id="@+id/linearLayout"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_alignParentEnd="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WALK"
+            android:id="@+id/walk"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/run"
+            android:onClick="walkfunction"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:background="#e74c3c"
+            android:textSize="20sp"
+            android:textColor="#ecf0f1"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Run"
+            android:id="@+id/run"
+            android:layout_alignBottom="@+id/walk"
+            android:layout_alignStart="@+id/myTitle"
+            android:layout_toStartOf="@+id/data"
+            android:onClick="runningfunction"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:background="#e74c3c"
+            android:textSize="20sp"
+            android:textColor="#ecf0f1"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2b3c4e"
+        android:id="@+id/linearLayout2"
+        android:gravity="center|center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/button2"
+            android:textSize="20sp"
+            android:textColor="#ecf0f1"
+            android:onClick="DetailsActivity"
+            android:layout_weight="1000"
+            android:background="@drawable/details" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/button"
+            android:background="@drawable/bmii"
+            android:textSize="20sp"
+            android:textColor="#ecf0f1"
+            android:onClick="bmi"
+            android:layout_weight="1000"
+            android:nestedScrollingEnabled="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button3"
+            android:background="@drawable/glass"
+            android:textSize="20sp"
+            android:textColor="#ecf0f1"
+            android:onClick="water"
+            android:layout_weight="1000" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/button6"
+            android:background="@drawable/goal"
+            android:textSize="20sp"
+            android:textColor="#ecf0f1"
+            android:onClick="goals"
+            android:layout_weight="1000" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button7"
+            android:background="@drawable/ads"
+            android:textSize="20sp"
+            android:textColor="#ecf0f1"
+            android:onClick="gotoad"
+            android:layout_weight="1000" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button8"
+            android:layout_weight="1000"
+            android:onClick="setfbstatus"
+            android:background="@drawable/info" />
+
+    </LinearLayout>
+
+</RelativeLayout>
+<!--
+
+-->

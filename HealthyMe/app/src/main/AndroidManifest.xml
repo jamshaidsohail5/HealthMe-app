@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hayyaalassalah.faizanahmad.healthyme">
+
+    <uses-feature android:name="android.hardware.sensor.stepcounter" />
+    <uses-feature android:name="android.hardware.sensor.stepdetector" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+
+
+    <application
+        android:name=".Font"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+<!--
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+-->
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+
+
+
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashActivitytheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider230932080673192"
+            android:exported="true" />
+
+        <activity
+            android:name=".DetailsActivity"
+
+            android:theme="@style/SplashActivitytheme">
+        </activity>
+
+        <activity
+            android:name=".ActivityOther"
+
+            android:theme="@style/SplashActivitytheme">
+        </activity>
+
+        <activity
+            android:name=".BmiActivity"
+
+            android:theme="@style/SplashActivitytheme">
+        </activity>
+
+
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/MainActivityTheme"
+            />
+        <activity
+            android:name=".StepsActivity"
+            android:theme="@style/MyTheme"
+            />
+        <activity
+            android:name=".RunningActivity"
+            android:theme="@style/MyTheme"
+            />
+
+        <activity
+            android:name=".WaterActivity"
+            android:theme="@style/MyTheme"
+            />
+
+        <activity
+
+            android:name=".show"
+            android:theme="@style/MyScore"
+            >
+
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+
+
+        </activity>
+
+        <activity android:name=".Goals" />
+        <activity android:name=".MyProfile"></activity>
+        <activity android:name=".AdAct"></activity>
+
+
+        <service android:name=".StepCounterService" />
+
+        <receiver android:name=".BroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+
+
+</manifest>

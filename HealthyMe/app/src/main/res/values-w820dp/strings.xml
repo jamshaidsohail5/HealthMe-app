@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">HealthMe</string>
+    <string name="summary"><b>SUMMARY</b></string>
+    <string name="walking"><b>START WALKING</b></string>
+    <string name="running"><b>START RUNNING</b></string>
+    <string name="bicycling"><b>START BICYCLING</b></string>
+    <string name="Previous"><b>Previous Data</b></string>
+    <string name="y">YOUR  DATA</string>
+    <string name="facebook_app_id">230932080673192</string>
+    <string name="banner_footer"> ca-app-pub-9312114822280336/7321526405</string>
+    <string name="interstitial_full_screen_ad">ca-app-pub-9312114822280336/4228459207</string>
+
+</resources>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D01414"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Body mass index"
+        android:id="@+id/title"
+        android:layout_gravity="center_horizontal"
+        android:textSize="99px"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Height (cm)"
+        android:id="@+id/textView4"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ffffff" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/height"
+        android:layout_gravity="center_horizontal"
+        android:indeterminate="false"
+        android:max="330" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="progress"
+        android:id="@+id/progressHeight"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="40sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Weight (kg)"
+        android:id="@+id/textView6"
+        android:textColor="#ffffff" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/weight"
+        android:layout_gravity="center_horizontal"
+        android:indeterminate="false"
+        android:max="180" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="progress"
+        android:id="@+id/progressWeight"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="40sp" />
+
+    <Button
+        android:layout_width="500px"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_button"
+        android:text="Calculate"
+        android:id="@+id/calculate"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20sp"
+        android:textColor="#212020"
+        android:layout_marginBottom="30sp"
+        android:onClick="calculateBMI" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bmi"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center" />
+
+</LinearLayout>
